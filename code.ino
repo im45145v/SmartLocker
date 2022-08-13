@@ -78,6 +78,26 @@ void checkKEY(){
   for (i=0; i<len_key; i++) {
     if (attempt_key[i]==master_key[i]) {
       correct++;
-      }
+  if (correct==len_key && z==len_key){
+    lcd.setCursor(0,1);
+    lcd.print("Correct Key");
+    digitalWrite(relayInput, HIGH); // turn relay on
+    delay(5000);
+    digitalWrite(relayInput, LOW); // turn relay off
+    z=0;
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Insert Password Now");
+   }else{
+    lcd.setCursor(0,1);
+    lcd.print("Incorrect Key");
+    delay(1000);
+    z=0;
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Insert Password");
+   }
+   for (int zz=0; zz<len_key; zz++) {
+    attempt_key[zz]=0;
     }
 }
