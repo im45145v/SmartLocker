@@ -17,3 +17,19 @@ char keys[ROWS][COLS] = {
 };byte rowPins[ROWS] = {D1, D2, D3, D4};  
 byte colPins[COLS] = {D5, D6, D7, D8};
 //columns connected to digital pins of nodemcu
+
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
+  WiFi.mode(WIFI_STA);
+  WiFi.disconnect();
+  delay(1000);
+  Serial.println();
+  Serial.println();
+  Serial.print("Connecting to: ");
+  Serial.println(_SSID);
+  WiFi.begin(_SSID, _PASSWORD);
+
+}
