@@ -50,5 +50,27 @@ void setup() {
   lcd.print("Enter OTP: ");
 }
 void loop(){
-  
+  String otp = firebase.getString("/SLOCK");
+  Serial.print("Received String: ");
+  Serial.println(otp);
+  delay(1000);
+  char key = keypad.getKey();
+    lcd.setCursor(z-1,1);
+    lcd.print("*");
+    if (key){
+      switch(key){
+        case '*':
+          z=0;
+          break;
+        case '#':
+          delay(100); 
+          checkKEY();
+          break;
+        default:
+          attempt_key[z]=key;
+          z++;
+        }
+    }
+}
+void checkKEY(){
 }
