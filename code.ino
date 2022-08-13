@@ -31,5 +31,15 @@ void setup() {
   Serial.print("Connecting to: ");
   Serial.println(_SSID);
   WiFi.begin(_SSID, _PASSWORD);
-
+  // Print the IP address
+  Serial.print("Use this URL to connect: ");
+  Serial.print("http://");
+  Serial.print(WiFi.localIP());
+  Serial.println("/");
+  digitalWrite(LED_BUILTIN, HIGH);
+  pinMode(relayInput, OUTPUT); 
+  lcd.begin();
+  lcd.backlight();
+  lcd.setCursor(0,0);
+  lcd.print("Enter OTP: ");
 }
