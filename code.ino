@@ -17,8 +17,14 @@ char keys[ROWS][COLS] = {
 };byte rowPins[ROWS] = {D1, D2, D3, D4};  
 byte colPins[COLS] = {D5, D6, D7, D8};
 //columns connected to digital pins of nodemcu
-
-
+int relayInput = D0; 
+Keypad keypad= Keypad(makeKeymap(key),rowPins,colPins, ROWS, COLS);
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+const int len_key = 4;
+char otp[len_key];
+char master_key[len_key] = otp[len_key];
+char attempt_key[len_key];
+int z=0;
 void setup() {
   Serial.begin(115200);
   pinMode(LED_BUILTIN, OUTPUT);
@@ -42,4 +48,7 @@ void setup() {
   lcd.backlight();
   lcd.setCursor(0,0);
   lcd.print("Enter OTP: ");
+}
+void loop(){
+  
 }
