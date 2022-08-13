@@ -73,4 +73,11 @@ void loop(){
     }
 }
 void checkKEY(){
+  int correct=0;
+  int i;
+  for (i=0; i<len_key; i++) {
+    if (attempt_key[i]==master_key[i]) {
+      correct++;
+      }
+    }
 }
