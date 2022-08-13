@@ -91,7 +91,7 @@ void checkKEY(){
    }else{
     lcd.setCursor(0,1);
     lcd.print("Incorrect Key");
-    delay(1000);
+    delay(3000);
     z=0;
     lcd.clear();
     lcd.setCursor(0,0);
@@ -101,3 +101,4 @@ void checkKEY(){
     attempt_key[zz]=0;
     }
 }
+//working like a pro
