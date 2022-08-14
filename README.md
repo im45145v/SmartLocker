@@ -1,4 +1,4 @@
-## SMART LOCKER
+# SMART LOCKER
 
 THE PROBLEM:
 Now a days everyone is busy with their own works. It has become very difficult to monitor each and every task which goes in our daily lives. People has become so busy that they buy things for themselves through online e-commerce websites i.e., from Amazon and Flipkart. Most of them are working professional and busy with their daily schedule and as they order things they don’t receive or collect their order at the time of delivery. They simply entrust the order to their neighbour’s or the delivery agent takes away the parcel with him leading to delay in delivery. Due to delay in delivery the customer have reschedule the delivery date by contacting the customer care and have to wait for few more days in order to take the delivery and it leads to customer dissatisfaction.
